@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+
+import WeatherWidget from '@/components/WeatherWidget'
 
 Vue.config.productionTip = false
 
-new Vue({
-  store,
+const app = new Vue({
   render: h => h(App)
-}).$mount('#app')
+})
+
+Vue.component('weather-widget', WeatherWidget)
+
+app.$mount('#app')
